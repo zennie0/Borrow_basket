@@ -1,0 +1,98 @@
+<%- layout("layouts/boilerplate")%>
+<body>
+  <h2>Edit your listing</h2>
+  <form
+    class="needs-validation"
+    novalidate
+    method="POST"
+    action="/listings/<%=listing._id%>?_method=PUT"
+    enctype="multipart/form-data"
+  >
+    <div class="row">
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="title" class="form-label">title</label>
+          <br />
+          <input
+            type="text"
+            name="listing[title]"
+            class="form-control"
+            placeholder="title"
+            value="<%=listing.title%>"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">description</label>
+          <br />
+          <textarea
+            name="listing[description]"
+            class="form-control"
+            id="description"
+            required
+          >
+<%=listing.description%></textarea
+          >
+        </div>
+        <div class="mb-3">
+          <label for="country" class="form-label">country</label>
+          <br />
+          <input
+            type="text"
+            class="form-control"
+            name="listing[country]"
+            placeholder="country"
+            value="<%=listing.country%> "
+            required
+          />
+          <br /><br /><br />
+        </div>
+
+        <div class="mb-3 form-control" >
+          original listing image <br>
+          <img src="<%=originalimg%>"  >
+        </div>
+
+ <div class="mb-3">
+          <label for="image" class="form-label">Upload image</label><br />
+          <input
+            class="form-control is-invalid"
+            type="file"
+            name="listing[image]"
+            
+            
+          />
+
+        
+
+
+        <div class="mb-3">
+          <label for="location" class="form-label">location</label><br />
+          <input
+            type="text"
+            class="form-control"
+            name="listing[location]"
+            placeholder="location"
+            value="<%=listing.location%> "
+            required
+          />
+          <br /><br /><br />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">price</label><br />
+          <input
+            type="String"
+            class="form-control"
+            name="listing[price]"
+            placeholder="price"
+            value="<%=listing.price%> "
+            required
+          /><br /><br /><br />
+        </div>
+      </div>
+    </div>
+    <button class="btn-danger btn">submit</button>
+    <!-- 
+        //.............................. -->
+  </form>
+</body>

@@ -1,0 +1,102 @@
+<% layout("layouts/boilerplate")%>
+<style>
+  #filters{
+    display:flex !important;
+    flex-wrap:wrap !important;
+  }
+  .filter{
+    text-align: center;
+    margin-right:2rem;
+    opacity: 0.7;
+  }
+  .filter:hover{
+    opacity:1;
+    cursor: pointer;
+  }
+  .filter p{
+    font-size:0.8rem
+  }
+</style>
+<div id="filters" >
+<div class="filter">
+  <div><i class="fa-solid fa-fire"></i></div>
+  <p>Trending</p>
+</div>
+<div class="filter">
+  <div><i class="fa-solid fa-shirt"></i></div>
+  <p>Fashion</p>
+</div>
+<div class="filter">
+  <div><i class="fa-solid fa-book"></i></div>
+  <p>Books</p>
+</div>
+<div class="filter">
+  <div><i class="fa-solid fa-screwdriver-wrench"></i></div>
+  <p>Tools</p>
+</div>
+<div class="filter">
+  <div><i class="fa-solid fa-car"></i></div>
+  <p>vehicals</p>
+</div>
+<div class="filter">
+  <div><i class="fa-solid fa-gamepad"></i></div>
+  <p>Gaming</p>
+</div>
+<div class="filter">
+  <div><i class="fa-solid fa-house"></i></div>
+  <p>House</p>
+</div>
+
+
+</div>
+
+</div>
+
+<div class="flexing row row-cols-lg-3 row-cols-md-3 row-cols-sm-3 mt-3">
+  <% for(let listing of allListing){ %>
+  <a href="/listings/<%=listing.id%>" class="listing-link">
+    <div class="card listing-card col-3" style="width: 20rem">
+      <img
+        src="<%=listing.image.url%>"
+        class="card-img-top"
+        alt="image"
+        style="width: 20rem; height: 20rem"
+      />
+      <div class="card-body">
+        <p class="card-text">
+          <%= listing.title%>
+          <br />
+          &#8377; <%=listing.price%>/day
+        </p>
+        <br />
+      </div>
+    </div>
+  </a>
+
+  <%}%>
+</div>
+
+<script>
+  let darkMode = document.getElementById("switchCheckDefault");
+ 
+  darkMode.addEventListener("click", ()=>{
+     let cards = document.getElementsByClassName("card");
+    if(darkMode.checked){
+      document.body.style.backgroundColor = "black";
+      document.body.style.color = "white";
+      for(c of cards){
+        c.style.backgroundColor="black"
+        c.style.color="white"
+      }
+
+    }else{
+       document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+      for(c of cards){
+        c.style.backgroundColor="white"
+        c.style.color="black"
+      }
+
+    }
+  })
+</script>

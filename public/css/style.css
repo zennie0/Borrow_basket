@@ -1,0 +1,50 @@
+
+.flexing{
+   display: flex !important;
+   justify-content: center !important;
+   align-items: center !important;
+   margin-left:2rem !important;
+}
+ .listing-card{
+    border:none !important;
+    margin:2rem;
+    padding:2rem;
+ }
+.rate{
+   width:fit-content !important;
+   height: 20px !important;
+   margin-bottom: 2rem;;
+}
+
+.card-img-top{
+    border-radius: 1rem  !important;
+    width:100% !important;
+    object-fit:cover !important;
+ }
+.card-body{
+    padding:0 !important;
+ }
+.listing-link{
+    padding-left:2rem;
+    text-decoration: none;
+
+}
+.btn a{
+   text-decoration: none !important;
+   color:white !important;
+}
+
+
+.navbar{
+    background-color:white;
+     margin-bottom:2rem !important;
+}
+
+
+.footer{
+   background-color: rgba(154, 154, 154, 0.175);
+}
+.footer a{
+   text-decoration: none;
+   color:rgb(102, 102, 102);
+}
