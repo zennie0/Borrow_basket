@@ -47,6 +47,8 @@ router.route("/:id")
 );
 
 
+router.get("/:id/borrow",isLoggedIn,listingController.borrowListing);
+
 
 
 

@@ -81,3 +81,7 @@ module.exports.deleteListing =async (req, res) => {
     req.flash("success", "listing deleted");
     res.redirect(`/listings`);
   }
+
+  module.exports.borrowListing= (req,res)=>{
+    res.render("./listings/borrow.ejs")
+  }

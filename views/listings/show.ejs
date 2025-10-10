@@ -19,9 +19,11 @@
       <p>owner: <%= listing.owner.username %></p>
     </div>
   </div>
+  <a href="/listings/<%=listing._id %>/borrow"><button class="btn btn-dark offset-3 mb-1 mt-2 col-1">Borrow</button></a>
+  
 
   <%if(currUser && listing.owner._id.equals(currUser._id)){%>
-  <button class="btn btn-dark offset-3 mb-1 col-1">
+  <button class="btn btn-dark offset-3 mb-1 mt-2 col-1">
     <a href="/listings/<%=listing._id %>/edit">edit </a>
 
   </button>

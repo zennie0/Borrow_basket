@@ -1,0 +1,57 @@
+<% layout("layouts/boilerplate")%>
+
+ <form  class="needs-validation" novalidate >
+    <div class="row">
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="validationfullname" class="form-label">fullname</label>
+          <br />
+          <input
+            type="text"
+            id="validationfullname"
+            class="form-control is-invalid"
+            name="fullname"
+            placeholder="fullname"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">address</label>
+          <br />
+          <textarea
+            class="form-control is-invalid"
+            name="address"
+            id="address"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="Email" class="form-label">Email</label>
+          <br />
+          <input
+            class="form-control is-invalid"
+            type="text"
+            name="Email"
+            placeholder="Email"
+            required
+          />
+          <br /><br /><br />
+        </div>
+        </div>
+       
+        <div class="mb-3">
+          <label for="Payment" class="form-label">Choose Payment method</label><br />
+          <select name="Payment" id="Payment">
+            <option value="UPI">UPI</option>
+            <option value="Card">Card</option>
+            <option value="credit">credit</option>
+            <option value="cod">Cash on delivery</option>
+          </select>
+          <br /><br /><br />
+        </div>
+       <a href="#"> <button class="btn btn-primary">Borrow</button></a>
+      </div>
+    </div>
+  </form>
+  <button class="btn btn-dark offset-1 mt-2 mb-2">contact owner</button>
+</body>
