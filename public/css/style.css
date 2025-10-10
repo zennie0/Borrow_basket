@@ -48,3 +48,14 @@
    text-decoration: none;
    color:rgb(102, 102, 102);
 }
+.firsst-page{
+   text-align: center;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+.firsst-page .card{
+   text-align: center;
+   
+   width:300px;
+}

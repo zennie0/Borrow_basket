@@ -1,3 +1,5 @@
+//this is for bootstrap validation function
+
 (() => {
   'use strict';
 

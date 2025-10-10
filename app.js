@@ -93,6 +93,11 @@ app.use("/", userRouter);
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter); // here :id parameter remains in the app,js file and is unable to go to reviewroute file
 
+//route for first page
+app.get("/",(rea,res)=>{
+  res.render("./listings/firstPage.ejs");
+})
+
 //for wrong route
 app.use((req, res, next) => {
   next(new ExpressError(404, "page not found"));
